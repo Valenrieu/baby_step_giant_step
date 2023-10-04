@@ -11,7 +11,6 @@ def isgenerator(n, g):
     return False
 
 def findgenerator(n):
-
     for i in range(n):
         nombres = set()
 
