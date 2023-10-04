@@ -21,9 +21,9 @@ The usage is the same as babys_giant.
 Ex:
 ```python
 >>> bsgs(21, 3, 17)
-Temps d'execution : 0:00:00.000092
-Verification de la valeur de x...
-Valeur de x correcte
+Computation time : 0:00:00.000092
+Checking x value...
+Correct value of x
 ```
 
 find_generator.py file allows us to check if a given integer is a generator of a cyclic group
@@ -35,7 +35,7 @@ Ex, check if 7 is a generator of $(\mathbb{Z}/21\mathbb{Z}^*, \times)$:
 False
 ```
 
-Ex, find all generators of $(\mathbb{Z}/21\mathbb{Z}^*, \times)$:
+Ex, find all generators of $(\mathbb{Z}/7\mathbb{Z}^*, \times)$:
 ```python
 >>> findgenerator(7)
 3
