@@ -7,7 +7,7 @@ Ex:
 4
 ```
 
-babys_giants function solves a^x = b mod n equations. Usage : babys_giants(n, a, b)
+babys_giants function solves $a^x \equiv b [n]$ equations. Usage : babys_giants(n, a, b)
 
 Ex, solve $5^x \equiv 17 [23]$:
 ```python
@@ -29,13 +29,13 @@ Correct value of x
 find_generator.py file allows us to check if a given integer is a generator of a cyclic group
 or to find all generators of a group.
 
-Ex, check if 7 is a generator of $(\mathbb{Z}/21\mathbb{Z}^*, \times)$:
+Ex, check if 7 is a generator of $(\mathbb{Z}/21\mathbb{Z}, \times)^{\times}$:
 ```python
 >>> isgenerator(21, 7)
 False
 ```
 
-Ex, find all generators of $(\mathbb{Z}/7\mathbb{Z}^*, \times)$:
+Ex, find all generators of $(\mathbb{Z}/7\mathbb{Z}, \times)^{\times}$:
 ```python
 >>> findgenerator(7)
 3
