@@ -1,7 +1,7 @@
 from math import sqrt, gcd, ceil
 import datetime as dt
 
-#Calcul de l'inverse modulaire utilisant l'algorithme d'euclide etendu
+# Calcul de l'inverse modulaire utilisant l'algorithme d'euclide etendu
 
 def inv_mod(a, b):
     """retourne l'inverse de a modulo b
@@ -22,7 +22,7 @@ def inv_mod(a, b):
     else:
         return None
 
-#algorithme de baby step giant step
+# Algorithme de baby step giant step
 
 def babys_giants(n, alpha, beta):
     tableh = dict()
@@ -33,6 +33,7 @@ def babys_giants(n, alpha, beta):
         tableh[baby] = j
     
     inv = inv_mod(alpha**m, n)
+
     if inv is None:
         alpha = str(alpha)
         n = str(n)
@@ -47,29 +48,26 @@ def babys_giants(n, alpha, beta):
         else:
             y = (y*inv)%n
 
-#essaie de resoudre en utilisant l'algorithme du haut, affiche le temps
-#avec les micro secondes et verifie la veleur trouvee
+# Essaie de resoudre en utilisant l'algorithme du haut, affiche le temps
+# avec les micro secondes et verifie la valeur trouvee
 
 def bsgs(n, a, b=1):
     debut = dt.datetime.now()
- 
     x = babys_giants(n, a, b)
     print("x =", x)
-
     fin = dt.datetime.now()
     temps = fin-debut
     print("Temps d'execution :", temps)
 
     if not x is None:
-        
         print("Verification de la valeur de x...")
-
         verif = pow(a, x, n)
+
         if verif==b:
-            return "Valeur de x correcte"
+            print("Valeur de x correcte")
 
         else:
-            return "Valeur de x incorrecte"
+            print("Valeur de x incorrecte")
 
     else:
-        return "Pas de valeur trouvee..."
+        print("Pas de valeur trouvee...")
