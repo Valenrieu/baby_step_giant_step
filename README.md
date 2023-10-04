@@ -1,3 +1,10 @@
+# Baby step giant step algorithm
+
+##Introduction
+This repository is an implementation of the baby step giant step algorithm (Daniel Shanks) to compute the discrete
+logarithm in a cyclic group. See https://en.wikipedia.org/wiki/Baby-step_giant-step for more informations.
+
+## Usage
 babys_giants.py file implements baby step giant step algorithm. There is also a function called
 inv_mod to compute modular inverse of two integers.
 
